@@ -1,0 +1,27 @@
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.jumbotron{
+	height: 100vh;
+	border-top: 20px solid #F2B103;
+}
+
+
+.jumbotron h1{
+	font-family: 'Patua One', cursive;
+	text-align: center;
+}
+
+.jumbotron p{
+	font-family: 'Roboto Slab', serif;
+	text-align: center;
+}
+
