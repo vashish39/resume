@@ -1,12 +1,13 @@
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .jumbotron{
+	width: 75%;
+	display: table;
+	margin: 0px auto;
 	height: 100vh;
 	border-top: 20px solid #F2B103;
 }
@@ -21,7 +22,96 @@ body {
 	font-family: 'Roboto Slab', serif;
 	text-align: center;
 }
-
-.nav{
+#pills-tab {
+	opacity: .1;
+	margin: 0px auto;
 	background-color: #F2B103;
+	color: #F2B103;
+	bottom: 0px;
+	width: 70%;
+	position: relative;
+	height: 50px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+	background-color: #343A40 !important;
+	height: 50px;
+	font-family: 'Patua One', cursive;
+	
+}
+
+.navbar{
+	opacity: .1;
+	margin: 0px auto;
+	width: 75%;
+	height: 70px;
+	margin-bottom: 10px;
+}
+
+.nav-link p{
+	margin: 5px;
+}
+
+#education{
+	opacity: .05;
+	
+}
+
+.info #experience{
+	background-color: #EBEBEC;
+}
+
+.info #portfolio{
+	background-color: #EBEBEC;
+}
+
+
+.info{
+	text-align: center;
+	width: 70%;
+	margin: 10px auto;
+}
+
+
+.info-section hr{
+	height: 10px;
+	text-align: center;
+	width: 4%;
+	margin: 20px auto;
+	background-color: #F2B103;
+}
+
+.info-section {
+	opacity: .05;
+	margin: 20px auto;
+	height: 60vh;
+}
+
+
+.info-section h3 {
+	font-family: 'Patua One', cursive;
+	margin: 20px auto;
+}
+
+.exp-section{
+	width: 60%;
+	margin: 0px auto;
+}
+
+.exp-section ul{
+	text-align: left;
+	list-style: none;
+	display: inline-block;
+}
+
+.exp-section h4{
+	margin-left: 30px;
+	font-family: 'Patua One', cursive;
+	float: left;
+	display: inline-block;
+}
+
+.exp-section h5{
+	font-family: 'Roboto Slab', serif;
+	float: right;
 }
