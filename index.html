@@ -129,8 +129,51 @@
 	    </div>
 	    
 	    <div class="info-section" id="skills">
-	        <p class = "header">Resume</p>
-	        <p class="info">Resume</p>
+	    	<h3>SKILLS</h3>
+		    <hr class="divider">
+		    <div class="container">
+			    <div class="row">
+				    <div class="col-md-6">
+				        <div class="skillbar" data-percent="100%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+						
+				        <div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+									
+				        <div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+					</div>
+					
+					<div class="col-md-6">
+				        <div class="skillbar" data-percent="100%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+						
+				        <div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+									
+				        <div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+					</div>					
+				</div>
+			</div>
 	    </div>
 	    
 	    <div class="info-section" id="portfolio">
@@ -138,7 +181,7 @@
 	        <p class="info">Contact</p>
 	    </div>
 	</div>
-
+	
  </div>
 <script type="text/javascript">
 	$('.nav-item').eq(0).click(() => {
@@ -166,7 +209,13 @@
 	});
 
 
-
+	jQuery(document).ready(function(){
+		jQuery('.skillbar').each(function(){
+			jQuery(this).find('.skillbar-bar').animate({
+				width:jQuery(this).attr('data-percent')
+			},1000);
+		});
+	});
 
 </script>
 </body>
