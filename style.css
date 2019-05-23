@@ -1,5 +1,5 @@
 body {
-	opacity: 1;
+	opacity: .1;
 	line-height: 1;
 }
 ol, ul {
@@ -38,16 +38,11 @@ table {
 	text-align: center;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-	background-color: #343A40 !important;
-	height: 50px;
-	font-family: 'Patua One', cursive;
-	
-}
+
 .navbar{
 	opacity: 1;
 	margin: 0px auto;
-	width: 75%;
+	width: 100%;
 	height: 70px;
 	margin-bottom: 10px;
 }
@@ -68,7 +63,7 @@ table {
 
 .info{
 	text-align: center;
-	width: 70%;
+	width: 100%;
 	margin: 10px auto;
 }
 
@@ -97,7 +92,7 @@ table {
 }
 
 .exp-section{
-	width: 60%;
+	width: 75%;
 	margin: 0px auto;
 }
 
