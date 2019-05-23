@@ -1,5 +1,5 @@
 body {
-	opacity: .1;
+	opacity: 1;
 	line-height: 1;
 }
 ol, ul {
@@ -178,4 +178,10 @@ table {
 	z-index: -100;
 	background: #C0C2C4;
 	border-radius:30px;
+}
+
+#portfolio img{
+	padding: 10px;
+	margin: 10px;
+	max-width: 250px;
 }
