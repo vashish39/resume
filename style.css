@@ -1,4 +1,47 @@
-
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	opacity: 1;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -8,7 +51,7 @@ body {
 	width: 75%;
 	display: table;
 	margin: 0px auto;
-	height: 100vh;
+	height: 70vh;
 	border-top: 20px solid #F2B103;
 }
 
@@ -22,16 +65,6 @@ body {
 	font-family: 'Roboto Slab', serif;
 	text-align: center;
 }
-#pills-tab {
-	opacity: .1;
-	margin: 0px auto;
-	background-color: #F2B103;
-	color: #F2B103;
-	bottom: 0px;
-	width: 70%;
-	position: relative;
-	height: 50px;
-}
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
 	background-color: #343A40 !important;
@@ -39,9 +72,8 @@ body {
 	font-family: 'Patua One', cursive;
 	
 }
-
 .navbar{
-	opacity: .1;
+	opacity: 1;
 	margin: 0px auto;
 	width: 75%;
 	height: 70px;
@@ -52,10 +84,6 @@ body {
 	margin: 5px;
 }
 
-#education{
-	opacity: .05;
-	
-}
 
 .info #experience{
 	background-color: #EBEBEC;
@@ -73,7 +101,7 @@ body {
 }
 
 
-.info-section hr{
+.divider{
 	height: 10px;
 	text-align: center;
 	width: 4%;
@@ -81,12 +109,15 @@ body {
 	background-color: #F2B103;
 }
 
+
 .info-section {
-	opacity: .05;
+	padding: 20px;
 	margin: 20px auto;
-	height: 60vh;
 }
 
+.info-section:hover {
+	opacity: .4;
+}
 
 .info-section h3 {
 	font-family: 'Patua One', cursive;
@@ -99,19 +130,28 @@ body {
 }
 
 .exp-section ul{
+	padding: 5px;
 	text-align: left;
 	list-style: none;
 	display: inline-block;
+	
 }
 
 .exp-section h4{
-	margin-left: 30px;
+	text-align: left;
 	font-family: 'Patua One', cursive;
-	float: left;
-	display: inline-block;
 }
 
 .exp-section h5{
 	font-family: 'Roboto Slab', serif;
-	float: right;
+	text-align: left;
+}
+
+#itiviti-head, #mere-head, #zunroof-head, #itiviti-info, #mere-info, #zunroof-info{
+	margin-top: 10px;
+}
+
+.exp-section .container{
+	margin-top: 10px;
+	border-bottom: 1px solid #dadada;
 }
