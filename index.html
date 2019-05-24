@@ -22,13 +22,19 @@
     	<p class="lead">This is a simple hero unit</p>
    	</div>
    	
+
+   	
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top mt-5">
-        <div class="nav">
+    	<a class="navbar-brand" href="#">Home</a>
+       	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  	<span class="navbar-toggler-icon"></span>
+		</button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link" id="education">Home</a>
-                <a href="#" class="nav-item nav-link" id="experience">Profile</a>
-                <a href="#" class="nav-item nav-link" id="skills" >Messages</a>
-                <a href="#" class="nav-item nav-link" id="portfolio">Reports</a>
+                <a href="#" class="nav-item nav-link" id="education">Education</a>
+                <a href="#" class="nav-item nav-link" id="experience">Experience</a>
+                <a href="#" class="nav-item nav-link" id="skills" >Skills</a>
+                <a href="#" class="nav-item nav-link" id="portfolio">Portfolio</a>
             </div>
         </div>
     </nav>
@@ -195,6 +201,18 @@
 	
  </div>
 <script type="text/javascript">
+
+	function getWidth() { //populates array with images	
+	    if($(window).width() < 560){
+	    	return("-100");
+	    }
+	    if($(window).width() > 560){
+	    	return ("-1000");
+	    }
+	}
+	
+	var width = $(window).width();
+	console.log(width);
 	$(document).ready(function(){
 		$('.nav-item').eq(0).click(() => {
 		    $('html, body').animate({scrollTop: $('.info-section').eq(0).offset().top -100}, 500);
@@ -225,7 +243,10 @@
 	        scrollTop: $('.info-section').eq(3).offset().top -100
 	    }, 500);
 	});
-
+	
+	$('.nav-item').on('click', function(){
+	    $('.navbar-collapse').collapse('hide');
+	});
 </script>
 </body>
 

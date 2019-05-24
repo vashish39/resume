@@ -1,5 +1,5 @@
 body {
-	opacity: 1 !important;
+	opacity: .1 !important;
 	line-height: 1;
 }
 ol, ul {
@@ -39,7 +39,7 @@ table {
 }
 
 
-.navbar{	
+.collapse{	
 	width: 100%;
 	margin-bottom: 10px;
 }
