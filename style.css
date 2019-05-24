@@ -1,5 +1,5 @@
 body {
-	opacity: .1;
+	opacity: 1;
 	line-height: 1;
 }
 ol, ul {
@@ -48,6 +48,11 @@ table {
 .nav{
 	margin: 0px auto;
 	text-align: center;
+}
+
+.nav a{
+	text-decoration: bold;
+	colo: white;
 }
 
 .nav-link p{
@@ -124,10 +129,6 @@ table {
 .exp-section .container{
 	margin-top: 10px;
 	border-bottom: 1px solid #dadada;
-}
-
-#skills{
-	opacity: .5 !important;
 }
 
 .skillbar {
