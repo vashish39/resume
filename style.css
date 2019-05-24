@@ -20,6 +20,7 @@ table {
 
 
 .jumbotron{
+	width: 100%;
 	display: table;
 	margin: 0px auto;
 	height: 70vh;
