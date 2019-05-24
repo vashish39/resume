@@ -1,5 +1,5 @@
 body {
-	opacity: 1;
+	opacity: .1;
 	line-height: 1;
 }
 ol, ul {
@@ -39,12 +39,15 @@ table {
 }
 
 
-.navbar{
-	opacity: 1;
-	margin: 0px auto;
+.navbar{	
 	width: 100%;
 	height: 70px;
 	margin-bottom: 10px;
+}
+
+.nav{
+	margin: 0px auto;
+	text-align: center;
 }
 
 .nav-link p{
