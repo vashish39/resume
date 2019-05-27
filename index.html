@@ -252,12 +252,12 @@
 		$('.scroll-up').click(() => {
 			var width = $(window).width();
 		    if(width < 560){
-		    	$('.scroll-up').css("left", "85%");
-		    	$('html, body').animate({scrollTop: $('.jumbotron').offset().top -200}, 500);
+		    	$('.scroll-up').css("left", "80%");
+		    	$('html, body').animate({scrollTop: $('.jumbotron').offset().top -100}, 500);
 		    }
 		    else if(width > 560){		    	
 		    	$('.scroll-up').css("left", "90%");
-		    	$('html, body').animate({scrollTop: $('.jumbotron').offset().top -50}, 500);		    	
+		    	$('html, body').animate({scrollTop: $('.jumbotron').offset().top -100}, 500);		    	
 		    }		    
 		});
 	});
@@ -279,7 +279,7 @@
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		    if(width < 560){
-		    	$('html, body').animate({scrollTop: $('.info-section').eq(0).offset().top -200}, 500);
+		    	$('html, body').animate({scrollTop: $('.info-section').eq(0).offset().top -100}, 500);
 		    }
 		    else if(width > 560){
 		    	$('html, body').animate({scrollTop: $('.info-section').eq(0).offset().top -100}, 500);
@@ -295,7 +295,7 @@
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		    if(width < 560){
-		    	$('html, body').animate({scrollTop: $('.info-section').eq(1).offset().top -200}, 500);
+		    	$('html, body').animate({scrollTop: $('.info-section').eq(1).offset().top -100}, 500);
 		    }
 		    else if(width > 560){
 		    	$('html, body').animate({scrollTop: $('.info-section').eq(1).offset().top -100}, 500);
@@ -313,7 +313,7 @@
 	    $('.skillbar-bar').animate({  width: "0%" }, 300);
 	    if(width < 560){
 	    	$('html, body').animate({
-		        scrollTop: $('.info-section').eq(2).offset().top -200
+		        scrollTop: $('.info-section').eq(2).offset().top -100
 		    }, 500, function(){
 		    	jQuery('.skillbar').each(function(){
 					jQuery(this).find('.skillbar-bar').animate({
@@ -342,7 +342,7 @@
 		$('.nav-item').eq(2).removeClass("nav-active");
 		$('.nav-item').eq(0).removeClass("nav-active");
 	    if(width < 560){
-	    	$('html, body').animate({scrollTop: $('.info-section').eq(3).offset().top -200}, 500);
+	    	$('html, body').animate({scrollTop: $('.info-section').eq(3).offset().top -100}, 500);
 	    }
 	    else if(width > 560){
 	    	$('html, body').animate({scrollTop: $('.info-section').eq(3).offset().top -100}, 500);
