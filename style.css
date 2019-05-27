@@ -39,13 +39,21 @@ table {
 	text-align: center;
 }
 
+.sticky-top{
+	z-index: 3000 !important;
+}
 
 .navbar-nav{
+	height: 100%;
 	width: 50%;
 	margin: 0px auto;
 	text-align: center;
 	color: #EBEBEC;
 	flex-direction:row !important;
+}
+
+.nav-active{
+	background-color: #212529;
 }
 
 .nav-small{
@@ -67,7 +75,7 @@ table {
 
 .nav-small img{
 	margin: 0px auto;
-	max-width: 30px;
+	max-width: 40px;
 }
 
 .jumbotron img{
@@ -99,12 +107,11 @@ position: relative;
 
 .navbar-nav img{
 	margin: 0px auto;
-	max-width: 30px;
+	max-width: 50px;
 }
 
-.nav{
-	margin: 0px auto;
-	text-align: center;
+.navbar{
+	padding: 0px !important;
 	
 }
 
@@ -112,6 +119,25 @@ position: relative;
 	margin: 5px;
 }
 
+.scroll-up{
+	position: fixed;
+	display: none;
+	border-radius: 100%;
+	transition: 0.5s;
+	bottom: 5%;
+	z-index: 2000;
+}
+
+
+.scroll-up:hover .fa-circle{
+	color: #F2B103;
+	border-radius: 100%;
+	box-shadow: 4px 0px 10px #F2B103;
+}
+
+.scroll-up:hover .fa-chevron-up{
+	color: #212529;
+}
 
 .info #experience{
 	background-color: #EBEBEC;
