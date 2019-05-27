@@ -16,34 +16,25 @@
 <body>
 
 <div class="container-fluid">
-    <!-- Demo Content --> 
-	<div class="jumbotron">
-		<h1 class="display-4">Ashish Verma!</h1>
-    	<p class="lead" style="opacity: .6;">Web Developer / Web Designer</p>
-   	</div>
-   	
-
-   	
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top mt-5">
-    <a class="navbar-brand" href="#">Home</a>
-       	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		  	<span class="navbar-toggler-icon"></span>
-		</button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link" id="education">Education</a>
-                <a href="#" class="nav-item nav-link" id="experience">Experience</a>
-                <a href="#" class="nav-item nav-link" id="skills" >Skills</a>
-                <a href="#" class="nav-item nav-link" id="portfolio">Portfolio</a>
-            </div>
-        </div>
-    </nav>
-
+		<div class="jumbotron">
+		<img class="profile img-responsive" src="img.jpg" alt="..."></img>
+			<h1 class="display-4">Hello World!</h1>
+	    	<p class="lead" style="opacity: .6;">Web Developer / Web Designer</p>
+	   	</div>
+	   	
+	    <nav class="navbar justify-content-center sticky-top" style="background-color: #F2B103">
+		    <div class="navbar-nav">
+		        <a href="#" class="nav-item nav-link" id="education"><img src="icon.png" alt="..."><br><p>Education</p></a>
+		        <a href="#" class="nav-item nav-link" id="experience"><img src="icon.png" alt="..."><br><p>Experience</p></a>
+		        <a href="#" class="nav-item nav-link" id="skills" ><img src="icon.png" alt="..."><br><p>Skills</p></a>
+		        <a href="#" class="nav-item nav-link" id="portfolio"><img src="icon.png" alt="..."><br><p>Portfolio</p></a>
+		    </div>
+	    </nav>
 	    
 	<div class="info" id="content">
 	
 	    <div class="info-section table-responsive" id="education">
-		    <h3>EDUCATION</h3>
+		    <h3>HEADER</h3>
 		    <hr class="divider">
 		    <table class="table table-hover">
 			  <thead>
@@ -77,7 +68,7 @@
 	    </div>
 	    
 	    <div class="info-section" id="experience">
-		    <h3>EXPERIENCE</h3>
+		    <h3>HEADER</h3>
 		    <hr class="divider">
 		    <div class="exp-section">
 			    <div class="container" id="itiviti">
@@ -210,6 +201,58 @@
 		    }
 		    else if(width > 560){
 		    	$('html, body').animate({scrollTop: $('.jumbotron').offset().top -50}, 500);
+		    }		    
+		});
+	});
+	
+	var adjustHeight = function() {
+		var height = $(window).height();
+	    if(height < 560){
+		    $(".jumbotron").css({"height": (height*0.75) + 'px'});
+		    $(".navbar").css({"height": (height*0.25) + 'px'});
+		    $('.jumbotron img').hide();
+		    $('.navbar-nav p').hide();
+	    }
+	    else if(height > 560 && height < 760){
+		    $(".jumbotron").css({"height": (height*0.85) + 'px'});
+		    $(".navbar").css({"height": (height*0.15) + 'px'});
+	    	$('.jumbotron img').show();
+	    	$('.navbar-nav p').show();
+	    }
+	    else if(height > 760){
+		    $(".jumbotron").css({"height": (height*0.88) + 'px'});
+		    $(".navbar").css({"height": (height*0.12) + 'px'});
+	    	$('.jumbotron img').show();
+	    	$('.navbar-nav p').show();
+	    }
+	}
+
+	$(document).ready(adjustHeight);
+	$(window).resize(adjustHeight);	  
+	
+	var adjustWidth = function() {
+		var width = $(window).width();
+	    if(width < 560){
+	    	$(".navbar-nav").addClass("nav-small");
+	    	$('.navbar-nav p').hide();
+	    }
+	    else if(width > 560){
+	    	$(".navbar-nav").removeClass("nav-small");
+	    }
+	}
+
+	$(".navbar-nav").ready(adjustWidth);
+	$(window).resize(adjustWidth);	  
+	
+	
+	$(document).ready(function(){
+		$('.nav-item').eq(0).click(() => {
+			var width = $(window).width();
+		    if(width < 560){
+		    	$('html, body').animate({scrollTop: $('.info-section').eq(0).offset().top -200}, 500);
+		    }
+		    else if(width > 560){
+		    	$('html, body').animate({scrollTop: $('.info-section').eq(0).offset().top -50}, 500);
 		    }		    
 		});
 	});
