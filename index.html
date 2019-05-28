@@ -207,23 +207,23 @@
 	var adjustHeight = function() {
 		var height = $(window).height();
 		var width = $(window).width();
-	    if(width < 640){
-		    $(".jumbotron").css({"height": (height*0.90) + 'px'});
-		    $(".navbar").css({"height": (height*0.10) + 'px'});
+	    if(width < 460 && height < 560){
+		    $(".jumbotron").css({"height": (height*0.85) + 'px'});
+		    $(".navbar").css({"height": (height*0.15) + 'px'});
 		    $('.jumbotron img').css("max-width", "200px");
 		    $(".navbar-nav").addClass("nav-small");
 		    $('.navbar-nav p').hide();
 	    	$('.scroll-up').css("left", "80%");
 	    }
-/* 	    else if(width > 560 && width < 760){
-		    $(".jumbotron").css({"height": (height*0.88) + 'px'});
-		    $(".navbar").css({"height": (height*0.12) + 'px'});
-	    	$('.jumbotron img').css("max-width", "200px");
-	    	$('.navbar-nav p').show();
-	    	$(".navbar-nav i").toggleClass("fa-3x");
-	    	$('.scroll-up').css("left", "90%");
-	    } */
-	    else if(width > 760){
+    	else if(width > 460 && width < 660 && height > 560 && height < 760){
+		    $(".jumbotron").css({"height": (height*0.87) + 'px'});
+		    $(".navbar").css({"height": (height*0.13) + 'px'});
+		    $('.jumbotron img').css("max-width", "200px");
+		    $(".navbar-nav").addClass("nav-small");
+		    $('.navbar-nav p').hide();
+	    	$('.scroll-up').css("left", "80%");
+	    }
+	    else if(width > 660 && height > 560){
 		    $(".jumbotron").css({"height": (height*0.88) + 'px'});
 		    $(".navbar").css({"height": (height*0.12) + 'px'});
 	    	$('.jumbotron img').css("max-width", "300px");
