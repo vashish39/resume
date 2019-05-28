@@ -368,32 +368,36 @@
 	    	var y = 0;
 	    	var z = 0;
 	    }
-		console.log(currentScroll);
 		if (currentScroll < 300) {
+			console.log("head");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		} 
 		else if (currentScroll > (300+x) && currentScroll < (800+(x*2))) {
+			console.log("ed");
 			$('.nav-item').eq(0).addClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		} 
 		else if (currentScroll > (800+(x*2)) && currentScroll < (1700+(y*2))) {
+			console.log("work");
 			$('.nav-item').eq(1).addClass("nav-active");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		}
 		else if (currentScroll > (1700+(z*2)) && currentScroll < (2100+(z*4))) {
+			console.log("sk");
 			$('.nav-item').eq(2).addClass("nav-active");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		}
 		else if (currentScroll > 2100+(z*4)) {
+			console.log("port");
 			$('.nav-item').eq(3).addClass("nav-active");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
@@ -403,6 +407,7 @@
 	
 	$(document).ready(function(){
 		$('.nav-item').eq(0).click(() => {
+			$('.info-section h3').eq(0).toggleClass("entry-right");
 			var width = $(window).width();
 		    if(width < 560){
 		    	$('html, body').animate({scrollTop: $('.info-section').eq(0).offset().top -75}, 500);
@@ -415,6 +420,7 @@
 
 	$(document).ready(function(){
 		$('.nav-item').eq(1).click(() => {
+			$('.info-section h3').eq(1).toggleClass("entry-right");
 			var width = $(window).width();
 		    if(width < 560){
 		    	$('html, body').animate({scrollTop: $('.info-section').eq(1).offset().top -75}, 500);
@@ -428,6 +434,7 @@
 	
 	$('.nav-item').eq(2).click(() => {
 		var width = $(window).width();
+		$('.info-section h3').eq(2).toggleClass("entry-right");
 	    $('.skillbar-bar').animate({  width: "0%" }, 300);
 	    if(width < 560){
 	    	$('html, body').animate({
@@ -454,6 +461,7 @@
 	});
 	
 	$('.nav-item').eq(3).click(() => {
+		$('.info-section h3').eq(3).toggleClass("entry-right");
 		var width = $(window).width();
 	    if(width < 560){
 	    	$('html, body').animate({scrollTop: $('.info-section').eq(3).offset().top -75}, 500);

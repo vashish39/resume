@@ -196,9 +196,11 @@ table {
 }
 
 .info-section h3 {
+	
 	font-family: 'Patua One', cursive;
 	margin: 20px auto;
 }
+
 
 .exp-section{
 	width: 75%;
@@ -305,7 +307,10 @@ table {
 	animation: fade-in-right .5s ease .6s forwards;
 }
 
-
+.entry-right {
+	opacity: 0;
+	animation: fade-in-right 1s ease .5s forwards;
+}
 
 
 @keyframes fade-in-up {
