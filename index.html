@@ -26,10 +26,10 @@
 		
 	    <nav class="navbar justify-content-center sticky-top" style="background-color: #F2B103">
 		    <div class="navbar-nav">
-		        <a href="#" class="nav-item nav-link" id="education"><i class="fas fa-3x fa-graduation-cap"></i><br><p>Education</p></a>
-		        <a href="#" class="nav-item nav-link" id="experience"><i class="fas fa-3x fa-briefcase"></i><br><p>Experience</p></a>
-		        <a href="#" class="nav-item nav-link" id="skills" ><i class="fas fa-3x fa-chart-bar"></i><br><p>Skills</p></a>
-		        <a href="#" class="nav-item nav-link" id="portfolio"><i class="fas fa-3x fa-paint-brush"></i><br><p>Portfolio</p></a>
+		        <a href="#" class="nav-item nav-link" id="nav-education"><i class="fas fa-3x fa-graduation-cap"></i><br><p>Education</p></a>
+		        <a href="#" class="nav-item nav-link" id="nav-experience"><i class="fas fa-3x fa-briefcase"></i><br><p>Experience</p></a>
+		        <a href="#" class="nav-item nav-link" id="nav-skills" ><i class="fas fa-3x fa-chart-bar"></i><br><p>Skills</p></a>
+		        <a href="#" class="nav-item nav-link" id="nav-portfolio"><i class="fas fa-3x fa-paint-brush"></i><br><p>Portfolio</p></a>
 		    </div>
 	    </nav>
 	    
@@ -278,36 +278,78 @@
 		}
 	});
 	
+/* 	$.fn.isInViewport = function() {
+	  var elementTop = $(this).offset().top;
+	  var elementBottom = elementTop + $(this).height() - 200;
+
+	  var viewportTop = $(window).scrollTop();
+	  var viewportBottom = viewportTop + $(window).height() +200;
+
+	  return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+	
+	$(window).on('resize scroll', function() {
+	  $('.info-section').each(function() {
+	    var activeNav = $(this).attr('id');
+	    if ($(this).isInViewport()) {
+	    	$('#nav-' + activeNav).addClass("nav-active");
+	    } 
+	    else {
+	    	$('#nav-' + activeNav).removeClass("nav-active");
+	    }
+	  });
+	}); */
 	
 	//change navbar based on current section
 	$(document).scroll(function() {
+		var width = $(window).width();
 		var currentScroll = $(this).scrollTop();
+	    if (width < 512) {
+	    	var x = 100;
+	    	var y = 175;
+	    	var z = 250;
+	    }
+	    else if (width > 512 && width < 768) {
+	    	var x = 100;
+	    	var y = 150;
+	    	var z = 200;
+	    }
+	    else if (width > 768 && width < 992){
+	    	var x = 50;
+	    	var y = 100;
+	    	var z = 100;
+	    }
+	    else if(width > 1024){
+	    	var x = 0;
+	    	var y = 0;
+	    	var z = 0;
+	    }
 		console.log(currentScroll);
-		if (currentScroll < 400) {
+		if (currentScroll < 300) {
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		} 
-		else if (currentScroll > 400 && currentScroll < 1000) {
+		else if (currentScroll > (300+x) && currentScroll < (800+(x*2))) {
 			$('.nav-item').eq(0).addClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		} 
-		else if (currentScroll > 1000 && currentScroll < 1600) {
+		else if (currentScroll > (800+(y*2)) && currentScroll < (1600+(y*2))) {
 			$('.nav-item').eq(1).addClass("nav-active");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		}
-		else if (currentScroll > 1800 && currentScroll < 2200) {
+		else if (currentScroll > (1600+(z*2)) && currentScroll < (1900+(z*3))) {
 			$('.nav-item').eq(2).addClass("nav-active");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		}
-		else if (currentScroll > 2200) {
+		else if (currentScroll > 1900+(z*3)) {
 			$('.nav-item').eq(3).addClass("nav-active");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
