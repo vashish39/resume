@@ -158,6 +158,23 @@
 							<div class="bar2"></div>
 							<div class="skillbar-bar"></div>
 						</div>
+						<div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+						
+						<div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+						
+						<div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
 					</div>
 					
 					<div class="col-md-6">
@@ -178,8 +195,27 @@
 							<div class="bar2"></div>
 							<div class="skillbar-bar"></div>
 						</div>
-					</div>					
+						
+						<div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+						
+						<div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+						<div class="skillbar" data-percent="80%">
+							<div class="skillbar-title"><span>HTML5</span></div>
+							<div class="bar2"></div>
+							<div class="skillbar-bar"></div>
+						</div>
+					</div>
 				</div>
+				
+				
 			</div>
 	    </div>
 	    
@@ -215,7 +251,7 @@
 		    $('.navbar-nav p').hide();
 	    	$('.scroll-up').css("left", "80%");
 	    }
-    	else if(width > 460 && width < 660 && height > 560 && height < 760){
+    	else if((width > 460 && width < 660) && (height > 560 && height < 760)){
 		    $(".jumbotron").css({"height": (height*0.87) + 'px'});
 		    $(".navbar").css({"height": (height*0.13) + 'px'});
 		    $('.jumbotron img').css("max-width", "200px");
@@ -223,12 +259,20 @@
 		    $('.navbar-nav p').hide();
 	    	$('.scroll-up').css("left", "80%");
 	    }
-	    else if(width > 660 && height > 560){
+	    else if(width > 660 && height > 760){
 		    $(".jumbotron").css({"height": (height*0.88) + 'px'});
 		    $(".navbar").css({"height": (height*0.12) + 'px'});
 	    	$('.jumbotron img').css("max-width", "300px");
 	    	$('.navbar-nav p').show();
 	    	$('.scroll-up').css("left", "90%");
+	    }
+	    else{
+		    $(".jumbotron").css({"height": (height*0.89) + 'px'});
+		    $(".navbar").css({"height": (height*0.11) + 'px'});
+		    $('.jumbotron img').css("max-width", "200px");
+		    $(".navbar-nav").addClass("nav-small");
+		    $('.navbar-nav p').hide();
+	    	$('.scroll-up').css("left", "80%");
 	    }
 	}
 	
@@ -305,14 +349,14 @@
 		var width = $(window).width();
 		var currentScroll = $(this).scrollTop();
 	    if (width < 512) {
-	    	var x = 100;
-	    	var y = 175;
+	    	var x = 0;
+	    	var y = 0;
 	    	var z = 250;
 	    }
 	    else if (width > 512 && width < 768) {
 	    	var x = 100;
 	    	var y = 150;
-	    	var z = 200;
+	    	var z = 150;
 	    }
 	    else if (width > 768 && width < 992){
 	    	var x = 50;
@@ -337,19 +381,19 @@
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		} 
-		else if (currentScroll > (800+(y*2)) && currentScroll < (1600+(y*2))) {
+		else if (currentScroll > (800+(x*2)) && currentScroll < (1700+(y*2))) {
 			$('.nav-item').eq(1).addClass("nav-active");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(2).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		}
-		else if (currentScroll > (1600+(z*2)) && currentScroll < (1900+(z*3))) {
+		else if (currentScroll > (1700+(z*2)) && currentScroll < (2100+(z*4))) {
 			$('.nav-item').eq(2).addClass("nav-active");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
 			$('.nav-item').eq(3).removeClass("nav-active");
 		}
-		else if (currentScroll > 1900+(z*3)) {
+		else if (currentScroll > 2100+(z*4)) {
 			$('.nav-item').eq(3).addClass("nav-active");
 			$('.nav-item').eq(0).removeClass("nav-active");
 			$('.nav-item').eq(1).removeClass("nav-active");
