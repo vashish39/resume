@@ -8,8 +8,6 @@
 <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -18,7 +16,7 @@
 </head>
 <body>
 
-<div class="container-fluid">	
+<div class="container-fluid" style="margin: 0px; padding 0px;">	
 		<div class="jumbotron">
 			<img class="profile img-responsive" src="img.jpg" alt="..."></img>
 			<h1 class="display-4">Hello World!</h1>
@@ -28,10 +26,10 @@
 		
 	    <nav class="navbar justify-content-center sticky-top" style="background-color: #F2B103">
 		    <div class="navbar-nav">
-		        <a href="#" class="nav-item nav-link" id="education"><img src="icon.png" alt="..."><br><p>Education</p></a>
-		        <a href="#" class="nav-item nav-link" id="experience"><img src="icon.png" alt="..."><br><p>Experience</p></a>
-		        <a href="#" class="nav-item nav-link" id="skills" ><img src="icon.png" alt="..."><br><p>Skills</p></a>
-		        <a href="#" class="nav-item nav-link" id="portfolio"><img src="icon.png" alt="..."><br><p>Portfolio</p></a>
+		        <a href="#" class="nav-item nav-link" id="education"><i class="fas fa-3x fa-graduation-cap"></i><br><p>Education</p></a>
+		        <a href="#" class="nav-item nav-link" id="experience"><i class="fas fa-3x fa-briefcase"></i><br><p>Experience</p></a>
+		        <a href="#" class="nav-item nav-link" id="skills" ><i class="fas fa-3x fa-chart-bar"></i><br><p>Skills</p></a>
+		        <a href="#" class="nav-item nav-link" id="portfolio"><i class="fas fa-3x fa-paint-brush"></i><br><p>Portfolio</p></a>
 		    </div>
 	    </nav>
 	    
@@ -201,37 +199,43 @@
 			    	<div class="col-lg-4 img-responsive"><img src="img.jpg" alt="..."></img></div> 
 			    </div>
 	    </div>
-	</div>
-	
+	</div>	
  </div>
+ 
 <script type="text/javascript">
 
 	var adjustHeight = function() {
 		var height = $(window).height();
-	    if(height < 560){
-		    $(".jumbotron").css({"height": (height*0.75) + 'px'});
-		    $(".navbar").css({"height": (height*0.25) + 'px'});
-		    $('.jumbotron img').hide();
+		var width = $(window).width();
+	    if(width < 640){
+		    $(".jumbotron").css({"height": (height*0.90) + 'px'});
+		    $(".navbar").css({"height": (height*0.10) + 'px'});
+		    $('.jumbotron img').css("max-width", "200px");
+		    $(".navbar-nav").addClass("nav-small");
 		    $('.navbar-nav p').hide();
-		    
+	    	$('.scroll-up').css("left", "80%");
 	    }
-	    else if(height > 560 && height < 760){
-		    $(".jumbotron").css({"height": (height*0.85) + 'px'});
-		    $(".navbar").css({"height": (height*0.15) + 'px'});
-	    	$('.jumbotron img').show();
-	    	$('.navbar-nav p').show();
-	    }
-	    else if(height > 760){
+/* 	    else if(width > 560 && width < 760){
 		    $(".jumbotron").css({"height": (height*0.88) + 'px'});
 		    $(".navbar").css({"height": (height*0.12) + 'px'});
-	    	$('.jumbotron img').show();
+	    	$('.jumbotron img').css("max-width", "200px");
 	    	$('.navbar-nav p').show();
-	    	
+	    	$(".navbar-nav i").toggleClass("fa-3x");
+	    	$('.scroll-up').css("left", "90%");
+	    } */
+	    else if(width > 760){
+		    $(".jumbotron").css({"height": (height*0.88) + 'px'});
+		    $(".navbar").css({"height": (height*0.12) + 'px'});
+	    	$('.jumbotron img').css("max-width", "300px");
+	    	$('.navbar-nav p').show();
+	    	$('.scroll-up').css("left", "90%");
 	    }
 	}
-
+	
 	$(document).ready(adjustHeight);
 	$(window).resize(adjustHeight);	  
+<!--
+
 	
 	var adjustWidth = function() {
 		var width = $(window).width();
@@ -248,7 +252,7 @@
 
 	$(".navbar-nav").ready(adjustWidth);
 	$(window).resize(adjustWidth);	  
-	
+	-->
 	$(document).ready(function(){
 		$('.scroll-up').click(() => {
 			var width = $(window).width();
