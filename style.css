@@ -188,7 +188,6 @@ table {
 
 .info-section {
 	padding: 20px;
-	margin: 20px auto;
 }
 
 .info-section:hover {
@@ -196,7 +195,7 @@ table {
 }
 
 .info-section h3 {
-	
+	opacity: 0;
 	font-family: 'Patua One', cursive;
 	margin: 20px auto;
 }
@@ -267,8 +266,8 @@ table {
 }
 
 .skillbar-bar {
+	width: 0px;
 	height:15px;
-	width:0px;
 	background:#F2B103;
 	border-radius:30px;
 }
@@ -309,7 +308,7 @@ table {
 
 .entry-right {
 	opacity: 0;
-	animation: fade-in-right 1s ease .5s forwards;
+	animation: fade-in-right 1s ease forwards;
 }
 
 
