@@ -1,0 +1,38 @@
+<section class="experience section bg-tertiary">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+      @for (exp of experiences(); track exp.company; let i = $index) {
+        <div class="timeline-item" [class.left]="i % 2 === 0" [class.right]="i % 2 !== 0">
+          <div class="timeline-marker">
+            <mat-icon>{{ exp.icon }}</mat-icon>
+          </div>
+
+          <div class="timeline-content" [style.animation-delay]="(i * 0.2) + 's'">
+            <div class="content-header">
+              <h3 class="company">{{ exp.company }}</h3>
+              <span class="period">{{ exp.period }}</span>
+            </div>
+
+            <h4 class="role">{{ exp.role }}</h4>
+
+            <ul class="responsibilities">
+              @for (desc of exp.description; track desc) {
+                <li>{{ desc }}</li>
+              }
+            </ul>
+
+            <div class="technologies">
+              @for (tech of exp.technologies; track tech) {
+                <mat-chip-set>
+                  <mat-chip>{{ tech }}</mat-chip>
+                </mat-chip-set>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

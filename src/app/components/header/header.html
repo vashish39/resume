@@ -1,0 +1,36 @@
+<section class="header">
+  <div class="header-content">
+    <div class="profile-image-container animate-fade-in">
+      <img [src]="profileImage()" alt="Profile" class="profile-image" />
+      <div class="image-backdrop"></div>
+    </div>
+
+    <h1 class="name animate-fade-right animate-delay-2">{{ name() }}</h1>
+    <p class="title animate-fade-right animate-delay-3">{{ title() }}</p>
+
+    <div class="social-links animate-fade-up animate-delay-4">
+      @for (link of socialLinks(); track link.icon) {
+        <a
+          [href]="link.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          [attr.aria-label]="link.label"
+        >
+          <mat-icon>{{ link.icon }}</mat-icon>
+        </a>
+      }
+    </div>
+
+    <div class="scroll-indicator animate-fade-up animate-delay-5">
+      <span>Scroll Down</span>
+      <mat-icon class="bounce">keyboard_arrow_down</mat-icon>
+    </div>
+  </div>
+
+  <div class="header-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+</section>

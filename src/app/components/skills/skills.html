@@ -1,0 +1,51 @@
+<section class="skills section">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skills-column">
+        <h3 class="column-title">
+          <mat-icon>code</mat-icon>
+          Frontend Development
+        </h3>
+        @for (skill of frontendSkills(); track skill.name; let i = $index) {
+          <div class="skill-item" [class.visible]="isVisible()" [style.animation-delay]="(i * 0.1) + 's'">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-percentage">{{ skill.percentage }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                [style.width]="isVisible() ? skill.percentage + '%' : '0%'"
+                [style.transition-delay]="(i * 0.1) + 's'"
+              ></div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="skills-column">
+        <h3 class="column-title">
+          <mat-icon>dns</mat-icon>
+          Backend & Tools
+        </h3>
+        @for (skill of backendSkills(); track skill.name; let i = $index) {
+          <div class="skill-item" [class.visible]="isVisible()" [style.animation-delay]="(i * 0.1 + 0.3) + 's'">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-percentage">{{ skill.percentage }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div
+                class="skill-progress"
+                [style.width]="isVisible() ? skill.percentage + '%' : '0%'"
+                [style.transition-delay]="(i * 0.1 + 0.3) + 's'"
+              ></div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
