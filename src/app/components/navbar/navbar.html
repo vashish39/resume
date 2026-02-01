@@ -1,0 +1,30 @@
+<nav class="navbar" [class.scrolled]="isScrolled()">
+  <div class="navbar-container">
+    <button class="logo" (click)="scrollToTop()" aria-label="Scroll to top">
+      <span class="logo-text">Resume</span>
+    </button>
+
+    <div class="nav-items">
+      @for (item of navItems; track item.id) {
+        <button
+          class="nav-item"
+          [class.active]="activeSection() === item.id"
+          (click)="navigateTo(item.id)"
+          [matTooltip]="item.label"
+          matTooltipPosition="below"
+        >
+          <mat-icon>{{ item.icon }}</mat-icon>
+          <span class="nav-label">{{ item.label }}</span>
+        </button>
+      }
+    </div>
+
+    <button
+      class="theme-toggle"
+      (click)="toggleTheme()"
+      [attr.aria-label]="isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"
+    >
+      <mat-icon>{{ isDarkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,123 @@
+.education {
+  background: var(--bg-primary);
+  padding-top: 100px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.education-card {
+  position: relative;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg) !important;
+  background: var(--bg-secondary) !important;
+  border: none;
+  box-shadow: var(--shadow-md) !important;
+  transition: all var(--transition-normal);
+  overflow: visible;
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl) !important;
+
+    .card-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 8px 24px rgba(242, 177, 3, 0.4);
+    }
+  }
+
+  .card-icon {
+    position: absolute;
+    top: -24px;
+    left: var(--space-xl);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-gradient);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+
+    mat-icon {
+      color: var(--bg-dark);
+      font-size: 28px;
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  mat-card-header {
+    padding-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+
+    mat-card-title {
+      font-family: var(--font-heading);
+      font-size: var(--font-xl);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    mat-card-subtitle {
+      font-family: var(--font-body);
+      font-size: var(--font-base);
+      color: var(--text-secondary);
+    }
+  }
+
+  mat-card-content {
+    padding: 0;
+  }
+
+  .card-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+
+  .detail {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-body);
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+
+    mat-icon {
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+      color: var(--primary-color);
+    }
+
+    &.grade {
+      background: rgba(242, 177, 3, 0.1);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+
+      span {
+        color: var(--primary-dark);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
